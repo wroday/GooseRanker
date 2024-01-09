@@ -1,0 +1,58 @@
+/* Overall body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 10vh; /* Adjust top margin */
+    margin-bottom: 5vh; /* Space before the voting section */
+}
+
+/* Container for the two songs */
+#container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items to the top */
+    height: 25vh; /* Set height to a quarter of the viewport */
+    margin-top: 20vh; /* Increased top margin */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Space above the rankings list */
+}
+
+/* Individual song containers */
+.song-container {
+    text-align: center; /* Center the text horizontally */
+    margin: 0 20px; /* Space between song containers */
+}
+
+/* Styling for song names */
+.song-name {
+    font-size: 1.5em;
+    margin-bottom: 10px; /* Adjusted space between song name and button */
+}
+
+/* Styling for buttons */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Container for rankings */
+#rankings {
+    width: 100%; /* Full width */
+    height: 45vh; /* Adjusted height */
+    overflow-y: auto; /* Make it scrollable */
+    text-align: center; /* Center the content */
+    padding: 20px;
+}
+
+/* Styling for each ranking item */
+.ranking-item {
+    margin-bottom: 10px;
+}
