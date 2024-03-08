@@ -88,7 +88,7 @@ let songs = [
 let matchups = {};
 
 function getRandomSongs() {
-    let attempts = 0; // To prevent infinite loops
+    let attempts = 0;
     while (attempts < 1000) {
         let index1 = Math.floor(Math.random() * songs.length);
         let index2;
@@ -98,13 +98,13 @@ function getRandomSongs() {
 
         let matchupKey = `${songs[index1].name}-${songs[index2].name}`;
         if (!matchups[matchupKey]) {
-            matchups[matchupKey] = true; // Mark this matchup as occurred
+            matchups[matchupKey] = true;
             return [songs[index1], songs[index2]];
         }
         attempts++;
     }
     console.error("Unable to find a new matchup");
-    return []; // or handle this case appropriately
+    return [];
 }
 
 function displayRandomSongs() {
@@ -138,7 +138,7 @@ document.getElementById('voteSong1').addEventListener('click', function() {
     let losingIndex = document.getElementById('voteSong2').getAttribute('data-index');
     voteForSong(winningIndex, losingIndex);
     displayRandomSongs();
-    displayRankings(); // if you want to update rankings instantly
+    displayRankings();
 });
 
 document.getElementById('voteSong2').addEventListener('click', function() {
@@ -146,7 +146,7 @@ document.getElementById('voteSong2').addEventListener('click', function() {
     let losingIndex = document.getElementById('voteSong1').getAttribute('data-index');
     voteForSong(winningIndex, losingIndex);
     displayRandomSongs();
-    displayRankings(); // if you want to update rankings instantly
+    displayRankings();
 });
 
 function saveToLocalStorage() {
@@ -169,8 +169,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function resetData() {
     localStorage.clear();
-    // Reinitialize songs and matchups as per your initial setup
-    // Then call displayRandomSongs() and displayRankings()
 }
 
 document.addEventListener('DOMContentLoaded', function() {
